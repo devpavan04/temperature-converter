@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 360px) and (max-width: 767px)"
+      href="./mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 768px) and (max-width: 1100px)"
+      href="./tablet.css"
+    />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <div class="content">
+        <div class="cel-to-far">
+          <h2>Celcius To Fahrenheit</h2>
+          <form id="cel-far">
+            <input
+              type="number"
+              id="celciusNumber"
+              placeholder="Enter &#176; C"
+            />
+            <input type="submit" value="Convert To Fahrenheit" class="btn" />
+          </form>
+          <img src="./loading.gif" id="celtofarImg" />
+          <input type="text" disabled id="farResult" placeholder="°F" />
+        </div>
+
+        <div class="far-to-cel">
+          <h2>Fahrenheit to Celcius</h2>
+          <form id="far-cel">
+            <input
+              type="number"
+              id="fahrenheitNumber"
+              placeholder="Enter &#176; F"
+            />
+            <input type="submit" value="Convert To Celcius" class="btn" />
+          </form>
+          <img src="./loading.gif" id="fartocelImg" />
+          <input type="text" disabled id="celResult" placeholder="°C" />
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
