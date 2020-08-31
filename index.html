@@ -3,53 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 360px) and (max-width: 767px)"
-      href="./mobile.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 768px) and (max-width: 1100px)"
-      href="./tablet.css"
-    />
     <title>Temperature Converter</title>
   </head>
   <body>
     <div class="container">
-      <h1>Temperature Converter</h1>
-      <div class="content">
-        <div class="cel-to-far">
-          <h2>Celcius To Fahrenheit</h2>
-          <form id="cel-far">
-            <input
-              type="number"
-              id="celciusNumber"
-              placeholder="Enter &#176; C"
-            />
-            <input type="submit" value="Convert To Fahrenheit" class="btn" />
+      <h3><i>Temperature Converter</i></h3>
+      <div class="converters">
+        <div class="card">
+          <h5>Celcius To Fahrenheit</h5>
+          <form id="celciusToFahrenheit">
+            <input type="number" step="any" />
+            <button type="submit">Convert</button>
           </form>
-          <img src="./loading.gif" id="celtofarImg" />
-          <input type="text" disabled id="farResult" placeholder="°F" />
+          <input type="text" disabled id="celciusToFahrenheitResult" />
         </div>
 
-        <div class="far-to-cel">
-          <h2>Fahrenheit to Celcius</h2>
-          <form id="far-cel">
-            <input
-              type="number"
-              id="fahrenheitNumber"
-              placeholder="Enter &#176; F"
-            />
-            <input type="submit" value="Convert To Celcius" class="btn" />
+        <div class="card">
+          <h5>Celcius To Kelvin</h5>
+          <form id="celciusToKelvin">
+            <input type="number" step="any" />
+            <button type="submit">Convert</button>
           </form>
-          <img src="./loading.gif" id="fartocelImg" />
-          <input type="text" disabled id="celResult" placeholder="°C" />
+          <input type="text" disabled id="celciusToKelvinResult" />
+        </div>
+
+        <div class="card">
+          <h5>Fahrenheit To Celcius</h5>
+          <form id="fahrenheitToCelcius">
+            <input type="number" step="any" />
+            <button type="submit">Convert</button>
+          </form>
+          <input type="text" disabled id="fahrenheitToCelciusResult" />
+        </div>
+
+        <div class="card">
+          <h5>Fahrenheit To Kelvin</h5>
+          <form id="fahrenheitTokelvin">
+            <input type="number" step="any" />
+            <button type="submit">Convert</button>
+          </form>
+          <input type="text" disabled id="fahrenheitTokelvinResult" />
+        </div>
+
+        <div class="card">
+          <h5>Kelvin To Celcius</h5>
+          <form id="KelvinToCelcius">
+            <input type="number" step="any" />
+            <button type="submit">Convert</button>
+          </form>
+          <input type="text" disabled id="KelvinToCelciusResult" />
+        </div>
+
+        <div class="card">
+          <h5>Kelvin To Fahrenheit</h5>
+          <form id="KelvinToFahrenheit">
+            <input type="number" step="any" />
+            <button type="submit">Convert</button>
+          </form>
+          <input type="text" disabled id="KelvinToFahrenheitResult" />
         </div>
       </div>
     </div>
-
-    <script src="./main.js"></script>
   </body>
+
+  <script src="./calculate.js"></script>
+  <script src="./main.js"></script>
 </html>

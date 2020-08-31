@@ -1,41 +1,68 @@
-const celFarForm = document.getElementById('cel-far')
-const farCelForm = document.getElementById('far-cel')
-const celciusInput = document.getElementById('celciusNumber')
-const fahrenheitInput = document.getElementById('fahrenheitNumber')
-const farResult = document.getElementById('farResult')
-const celResult = document.getElementById('celResult')
-const celtofarImg = document.getElementById('celtofarImg')
-const fartocelImg = document.getElementById('fartocelImg')
+const calculate = new Calculate
 
+const celciusToFahrenheit = document.getElementById('celciusToFahrenheit'),
+  celciusToKelvin = document.getElementById('celciusToKelvin'),
+  fahrenheitToCelcius = document.getElementById('fahrenheitToCelcius'),
+  fahrenheitTokelvin = document.getElementById('fahrenheitTokelvin'),
+  KelvinToCelcius = document.getElementById('KelvinToCelcius'),
+  KelvinToFahrenheit = document.getElementById('KelvinToFahrenheit')
 
-celFarForm.addEventListener('submit', (e) => {
-  celtofarImg.style.display = 'block'
-  setTimeout(calculateCelToFar, 2000)
+celciusToFahrenheit.addEventListener('submit', (e) => {
+  const cel = celciusToFahrenheit.children[0].value
+  if (cel === '') {
+    alert('Enter Celcius value!')
+  } else {
+    calculate.celciusToFahrenheit(cel)
+  }
   e.preventDefault()
 })
 
-farCelForm.addEventListener('submit', (e) => {
-  fartocelImg.style.display = 'block'
-  setTimeout(calculateFarToCel, 2000)
+celciusToKelvin.addEventListener('submit', (e) => {
+  const cel = celciusToKelvin.children[0].value
+  if (cel === '') {
+    alert('Enter Celcius value!')
+  } else {
+    calculate.celciusToKelvin(cel)
+  }
   e.preventDefault()
 })
 
-function calculateCelToFar() {
-  if (celciusInput.value == '') {
-    alert('Enter celcius value')
+fahrenheitToCelcius.addEventListener('submit', (e) => {
+  const fah = fahrenheitToCelcius.children[0].value
+  if (fah === '') {
+    alert('Enter Fahrenheit value!')
   } else {
-    const farValue = celciusInput.value * 1.8 + 32
-    farResult.value = farValue + " °F"
+    calculate.fahrenheitToCelcius(fah)
   }
-  celtofarImg.style.display = 'none'
-}
+  e.preventDefault()
+})
 
-function calculateFarToCel() {
-  if (fahrenheitInput.value == '') {
-    alert('Enter fahrenheit value')
+fahrenheitTokelvin.addEventListener('submit', (e) => {
+  const fah = fahrenheitTokelvin.children[0].value
+  if (fah === '') {
+    alert('Enter Fahrenheit value!')
   } else {
-    const celValue = (fahrenheitInput.value - 32) / 1.8
-    celResult.value = celValue + " °C"
+    calculate.fahrenheitTokelvin(fah)
   }
-  fartocelImg.style.display = 'none'
-}
+  e.preventDefault()
+})
+
+KelvinToCelcius.addEventListener('submit', (e) => {
+  const kel = KelvinToCelcius.children[0].value
+  if (kel === '') {
+    alert('Enter kelvin value!')
+  } else {
+    calculate.KelvinToCelcius(kel)
+  }
+  e.preventDefault()
+})
+
+KelvinToFahrenheit.addEventListener('submit', (e) => {
+  const kel = KelvinToFahrenheit.children[0].value
+  if (kel === '') {
+    alert('Enter kelvin value!')
+  } else {
+    calculate.KelvinToFahrenheit(kel)
+  }
+  e.preventDefault()
+})
