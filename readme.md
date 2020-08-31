@@ -1,3 +1,3 @@
 # Temperature Converter
 
-Temperature converter application built with vanilla JavaScript.
+Temperature Converter application built with vanilla JavaScript.
